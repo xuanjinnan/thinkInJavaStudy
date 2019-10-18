@@ -79,9 +79,9 @@ public class TestMapPerformance36{
 			SlowMap36b<String,String> m3 = new SlowMap36b<String,String>();
 			m3.putAll(Countries.capitals(15));
 			System.out.println("m3:" + m3);
-			/*System.out.println("m3.harshEntry():" + m3.harshEntry());
+			System.out.println("m3.harshEntry():" + m3.harshEntry());
 			System.out.println("m3.get(\"BURUNDI\"):" + m3.get("BURUNDI"));
-			*/
+			
 		}
 }
 class SlowMap36a<K, V> extends AbstractMap<K, V> {
@@ -189,7 +189,7 @@ class MapEntryKeyComp<K,V> implements Comparator<MapEntry<K,V>>{
 		int hashCode2 = o2.getKey().hashCode();
 		System.out.println("hashCode1:" + hashCode1 + " hashCode2:" + hashCode2 + " result:" + (hashCode1 - hashCode2));
 		System.out.println();
-		return hashCode1 - hashCode2;
+		return hashCode1 > hashCode2 ? 1 : hashCode1 < hashCode2 ? -1 : 0;
 	}
 }
 
