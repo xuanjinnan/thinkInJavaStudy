@@ -35,10 +35,10 @@ class SimpleHashMap<K, V> extends AbstractMap<K, V> {
 				oldValue = ipair.getValue();
 				it.set(pair);//replace old with new
 				found = true;
-				System.out.println("Collision at " + 
+				/*System.out.println("Collision at " + 
 						ipair + ": " + probes + " probe" 
 						+ ((probes == 1) ? "" : "s") +
-						" needed");
+						" needed");*/
 				break;
 			}
 		}
